@@ -41,6 +41,7 @@ if(BUILD_TESTING)
     include)
   target_link_libraries(test_action_typesupport_c_builds
     ${_AMENT_EXPORT_LIBRARIES})
+  set_target_properties(test_action_typesupport_c_builds PROPERTIES LINKER_LANGUAGE C)
 
   ament_add_gtest(test_action_typesupport_cpp_builds
     test/test_cpp_type_support.cpp)
@@ -48,6 +49,7 @@ if(BUILD_TESTING)
     include)
   target_link_libraries(test_action_typesupport_cpp_builds
     ${_AMENT_EXPORT_LIBRARIES})
+  set_target_properties(test_action_typesupport_cpp_builds PROPERTIES LINKER_LANGUAGE CXX)
 endif()
 
 if(DEFINED PYTHON_INSTALL_DIR)
